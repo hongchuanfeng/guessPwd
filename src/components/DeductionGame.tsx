@@ -7,7 +7,7 @@ interface DeductionGameProps {
   locale?: 'en' | 'zh';
   onBack?: () => void;
   digitsCount?: 3 | 4 | 5 | 6 | 7 | 8 | 9; // 3位、4位、5位、6位、7位、8位或9位密码
-  onComplete?: (levelId: number) => void; // 完成回调
+  onComplete?: (levelId: number, time: number, attempts: number) => void; // 完成回调
 }
 
 interface Hint {

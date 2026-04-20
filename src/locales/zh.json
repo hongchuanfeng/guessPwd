@@ -1,0 +1,156 @@
+{
+  "game": {
+    "title": "密码破解",
+    "subtitle": "破解密码",
+    "start": "开始游戏",
+    "settings": "设置",
+    "records": "记录",
+    "language": "语言"
+  },
+  "level": {
+    "level": "关卡",
+    "selectLevel": "选择关卡",
+    "unlocked": "已解锁",
+    "locked": "未解锁",
+    "complete": "已完成",
+    "bestTime": "最佳时间",
+    "attempts": "尝试次数"
+  },
+  "levels": {
+    "1": {
+      "name": "入门",
+      "description": "4位纯数字",
+      "hints": "仅颜色提示"
+    },
+    "2": {
+      "name": "数字迷宫",
+      "description": "4位纯数字",
+      "hints": "颜色+范围提示"
+    },
+    "3": {
+      "name": "镜像挑战",
+      "description": "5位数字，可能重复",
+      "hints": "颜色+范围+奇偶提示"
+    },
+    "4": {
+      "name": "位置战争",
+      "description": "6位数字",
+      "hints": "颜色+范围+位置提示"
+    },
+    "5": {
+      "name": "邻居之争",
+      "description": "6位数字",
+      "hints": "颜色+相邻提示"
+    },
+    "6": {
+      "name": "质数迷局",
+      "description": "7位数字",
+      "hints": "颜色+质数提示"
+    },
+    "7": {
+      "name": "数学家",
+      "description": "8位数字",
+      "hints": "颜色+计算提示"
+    },
+    "8": {
+      "name": "数列密码",
+      "description": "8位数字",
+      "hints": "颜色+序列提示"
+    },
+    "9": {
+      "name": "大师推理",
+      "description": "9位数字",
+      "hints": "高级推理提示"
+    },
+    "10": {
+      "name": "终极挑战",
+      "description": "10位数字",
+      "hints": "终极推理提示"
+    }
+  },
+  "gameplay": {
+    "verify": "验证",
+    "clear": "清空",
+    "delete": "删除",
+    "newGame": "新游戏",
+    "giveUp": "放弃",
+    "time": "时间",
+    "remaining": "剩余",
+    "elapsed": "已用",
+    "attempt": "尝试",
+    "attempts": "尝试次数",
+    "hints": "提示"
+  },
+  "hints": {
+    "correctPosition": "位置正确",
+    "wrongPosition": "存在但位置错误",
+    "notExists": "不存在",
+    "range": "范围: {min} - {max}",
+    "greaterThan": "大于 {value}",
+    "lessThan": "小于 {value}",
+    "oddPosition": "奇数位",
+    "evenPosition": "偶数位",
+    "evenNumber": "偶数",
+    "oddNumber": "奇数",
+    "isPrime": "质数",
+    "notPrime": "合数",
+    "consecutive": "与下一位连续",
+    "noConsecutive": "没有连续数字",
+    "sumOfFirst": "前{n}位之和",
+    "product": "第{a}位和第{b}位之积",
+    "ascending": "包含递增序列",
+    "descending": "包含递减序列",
+    "fibonacci": "包含斐波那契数列",
+    "largest": "最大数字",
+    "smallest": "最小数字",
+    "compareGreater": "第{a}位 > 第{b}位",
+    "compareLess": "第{a}位 < 第{b}位"
+  },
+  "result": {
+    "victory": "胜利！",
+    "victoryMessage": "你破解了密码！",
+    "defeat": "游戏结束",
+    "defeatMessage": "正确密码是: {password}",
+    "timeUp": "时间到！",
+    "congratulations": "恭喜！",
+    "levelUnlocked": "第{level}关已解锁！",
+    "totalTime": "总用时",
+    "totalAttempts": "总尝试次数",
+    "playAgain": "再玩一次",
+    "nextLevel": "下一关",
+    "backToMenu": "返回菜单",
+    "share": "分享"
+  },
+  "settings": {
+    "title": "设置",
+    "sound": "音效",
+    "soundOn": "音效开",
+    "soundOff": "音效关",
+    "music": "背景音乐",
+    "vibration": "振动",
+    "theme": "主题",
+    "dark": "深色",
+    "light": "浅色"
+  },
+  "records": {
+    "title": "记录",
+    "noRecords": "暂无记录",
+    "bestTime": "最佳时间",
+    "fewestAttempts": "最少尝试",
+    "totalWins": "总胜利",
+    "gamesPlayed": "游戏场次"
+  },
+  "common": {
+    "cancel": "取消",
+    "confirm": "确认",
+    "close": "关闭",
+    "save": "保存",
+    "loading": "加载中...",
+    "error": "错误"
+  },
+  "footer": {
+    "copyright": "© 2026 Guess. 保留所有权利。",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  }
+}

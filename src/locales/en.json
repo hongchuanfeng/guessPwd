@@ -1,0 +1,156 @@
+{
+  "game": {
+    "title": "Password Cracker",
+    "subtitle": "Crack the Code",
+    "start": "Start Game",
+    "settings": "Settings",
+    "records": "Records",
+    "language": "Language"
+  },
+  "level": {
+    "level": "Level",
+    "selectLevel": "Select Level",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "complete": "Complete",
+    "bestTime": "Best Time",
+    "attempts": "Attempts"
+  },
+  "levels": {
+    "1": {
+      "name": "Beginner",
+      "description": "4-digit pure number",
+      "hints": "Color hints only"
+    },
+    "2": {
+      "name": "Number Maze",
+      "description": "4-digit pure number",
+      "hints": "Color + Range hints"
+    },
+    "3": {
+      "name": "Mirror Challenge",
+      "description": "5-digit with possible duplicates",
+      "hints": "Color + Range + Parity"
+    },
+    "4": {
+      "name": "Position War",
+      "description": "6-digit number",
+      "hints": "Color + Range + Position"
+    },
+    "5": {
+      "name": "Neighborhood War",
+      "description": "6-digit number",
+      "hints": "Color + Adjacent hints"
+    },
+    "6": {
+      "name": "Prime Mystery",
+      "description": "7-digit number",
+      "hints": "Color + Prime hints"
+    },
+    "7": {
+      "name": "Mathematician",
+      "description": "8-digit number",
+      "hints": "Color + Calculation hints"
+    },
+    "8": {
+      "name": "Sequence Cipher",
+      "description": "8-digit number",
+      "hints": "Color + Sequence hints"
+    },
+    "9": {
+      "name": "Master Deduction",
+      "description": "9-digit number",
+      "hints": "Advanced deduction hints"
+    },
+    "10": {
+      "name": "Ultimate Challenge",
+      "description": "10-digit number",
+      "hints": "Ultimate reasoning hints"
+    }
+  },
+  "gameplay": {
+    "verify": "Verify",
+    "clear": "Clear",
+    "delete": "Delete",
+    "newGame": "New Game",
+    "giveUp": "Give Up",
+    "time": "Time",
+    "remaining": "Remaining",
+    "elapsed": "Elapsed",
+    "attempt": "Attempt",
+    "attempts": "Attempts",
+    "hints": "Hints"
+  },
+  "hints": {
+    "correctPosition": "Correct position",
+    "wrongPosition": "Exists but wrong position",
+    "notExists": "Does not exist",
+    "range": "Range: {min} - {max}",
+    "greaterThan": "Greater than {value}",
+    "lessThan": "Less than {value}",
+    "oddPosition": "Odd position",
+    "evenPosition": "Even position",
+    "evenNumber": "Even number",
+    "oddNumber": "Odd number",
+    "isPrime": "Prime number",
+    "notPrime": "Not a prime number",
+    "consecutive": "Consecutive with next",
+    "noConsecutive": "No consecutive numbers",
+    "sumOfFirst": "Sum of first {n} digits",
+    "product": "Product of positions {a} and {b}",
+    "ascending": "Contains ascending sequence",
+    "descending": "Contains descending sequence",
+    "fibonacci": "Contains Fibonacci sequence",
+    "largest": "Largest digit",
+    "smallest": "Smallest digit",
+    "compareGreater": "Position {a} > Position {b}",
+    "compareLess": "Position {a} < Position {b}"
+  },
+  "result": {
+    "victory": "Victory!",
+    "victoryMessage": "You cracked the code!",
+    "defeat": "Game Over",
+    "defeatMessage": "The password was: {password}",
+    "timeUp": "Time's Up!",
+    "congratulations": "Congratulations!",
+    "levelUnlocked": "Level {level} Unlocked!",
+    "totalTime": "Total Time",
+    "totalAttempts": "Total Attempts",
+    "playAgain": "Play Again",
+    "nextLevel": "Next Level",
+    "backToMenu": "Back to Menu",
+    "share": "Share"
+  },
+  "settings": {
+    "title": "Settings",
+    "sound": "Sound",
+    "soundOn": "Sound On",
+    "soundOff": "Sound Off",
+    "music": "Background Music",
+    "vibration": "Vibration",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "records": {
+    "title": "Records",
+    "noRecords": "No records yet",
+    "bestTime": "Best Time",
+    "fewestAttempts": "Fewest Attempts",
+    "totalWins": "Total Wins",
+    "gamesPlayed": "Games Played"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "save": "Save",
+    "loading": "Loading...",
+    "error": "Error"
+  },
+  "footer": {
+    "copyright": "© 2026 Guess. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

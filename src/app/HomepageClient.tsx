@@ -10,11 +10,13 @@ import PrivacyPolicy from '@/components/PrivacyPolicy';
 import TermsOfService from '@/components/TermsOfService';
 import Disclaimer from '@/components/Disclaimer';
 import Copyright from '@/components/Copyright';
+import Help from '@/components/Help';
+import FAQ from '@/components/FAQ';
 import Modal from '@/components/Modal';
 import { useGame } from '@/context/GameContext';
 
 type GameState = 'menu' | 'playing' | 'victory' | 'defeat' | 'deduction' | 'about' | 'contact' | 'privacy' | 'terms' | 'disclaimer' | 'copyright';
-type TabType = 'basic' | 'deduction';
+type TabType = 'basic' | 'deduction' | 'help' | 'faq';
 
 // 基础版关卡配置
 const BASIC_LEVELS = [
@@ -226,11 +228,11 @@ export default function HomepageClient() {
           </div>
 
           <div className={styles.headerActions}>
-            <button className={styles.iconBtn} onClick={handleLanguageToggle}>
-              {locale === 'en' ? '中文' : 'EN'}
-            </button>
             <button className={styles.iconBtn} onClick={() => setShowRecords(true)}>
               📊
+            </button>
+            <button className={styles.iconBtn} onClick={handleLanguageToggle}>
+              {locale === 'en' ? '中文' : 'EN'}
             </button>
             <button className={styles.iconBtn} onClick={() => setShowSettings(true)}>
               ⚙️
@@ -244,14 +246,20 @@ export default function HomepageClient() {
           <div className={styles.menu}>
             <div className={styles.heroSection}>
               <h1 className={styles.heroTitle}>
-                {locale === 'en' 
-                  ? 'Choose Your Challenge' 
-                  : '选择你的挑战'}
+                {activeTab === 'help' 
+                  ? (locale === 'en' ? '📖 Game Help' : '📖 游戏帮助')
+                  : activeTab === 'faq'
+                  ? (locale === 'en' ? '❓ FAQ' : '❓ 常见问题')
+                  : (locale === 'en' ? 'Choose Your Challenge' : '选择你的挑战')}
               </h1>
               <p className={styles.heroSubtitle}>
                 {activeTab === 'basic'
                   ? (locale === 'en' ? '10 levels of increasing difficulty await you' : '10个难度递增的关卡等待着你')
-                  : (locale === 'en' ? 'Pure deduction challenges' : '纯推理挑战')}
+                  : activeTab === 'deduction'
+                  ? (locale === 'en' ? 'Pure deduction challenges' : '纯推理挑战')
+                  : activeTab === 'help'
+                  ? (locale === 'en' ? 'Learn how to play and master the game' : '学习如何玩游戏并成为大师')
+                  : (locale === 'en' ? 'Common questions and answers' : '常见问题解答')}
               </p>
             </div>
 
@@ -261,13 +269,25 @@ export default function HomepageClient() {
                 className={`${styles.tabButton} ${activeTab === 'basic' ? styles.tabActive : ''}`}
                 onClick={() => setActiveTab('basic')}
               >
-                {locale === 'en' ? '🎮 Basic Mode' : '🎮 基础版'}
+                {locale === 'en' ? '🎮 Basic' : '🎮 基础版'}
               </button>
               <button
                 className={`${styles.tabButton} ${activeTab === 'deduction' ? styles.tabActive : ''}`}
                 onClick={() => setActiveTab('deduction')}
               >
-                {locale === 'en' ? '🧩 Deduction Mode' : '🧩 推理版'}
+                {locale === 'en' ? '🧩 Deduction' : '🧩 推理版'}
+              </button>
+              <button
+                className={`${styles.tabButton} ${activeTab === 'help' ? styles.tabActive : ''}`}
+                onClick={() => setActiveTab('help')}
+              >
+                {locale === 'en' ? '📖 Help' : '📖 游戏帮助'}
+              </button>
+              <button
+                className={`${styles.tabButton} ${activeTab === 'faq' ? styles.tabActive : ''}`}
+                onClick={() => setActiveTab('faq')}
+              >
+                {locale === 'en' ? '❓ FAQ' : '❓ 常见问题'}
               </button>
             </div>
 
@@ -372,6 +392,19 @@ export default function HomepageClient() {
                 );
               })}
             </div>
+
+            {/* Help 和 FAQ 内容 */}
+            {activeTab === 'help' && (
+              <div className={styles.helpContent}>
+                <Help locale={locale} embedded={true} />
+              </div>
+            )}
+
+            {activeTab === 'faq' && (
+              <div className={styles.helpContent}>
+                <FAQ locale={locale} embedded={true} />
+              </div>
+            )}
           </div>
         )}
 
@@ -656,6 +689,8 @@ export default function HomepageClient() {
 
       <footer className={styles.footer}>
         <div className={styles.footerLinks}>
+          <a href="#" onClick={(e) => { e.preventDefault(); setActiveTab('help'); }}>{locale === 'en' ? 'Help' : '游戏帮助'}</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); setActiveTab('faq'); }}>{locale === 'en' ? 'FAQ' : '常见问题'}</a>
           <a href="#" onClick={(e) => { e.preventDefault(); setGameState('about'); }}>{locale === 'en' ? 'About' : '关于我们'}</a>
           <a href="#" onClick={(e) => { e.preventDefault(); setGameState('contact'); }}>{locale === 'en' ? 'Contact' : '联系我们'}</a>
           <a href="#" onClick={(e) => { e.preventDefault(); setGameState('privacy'); }}>{locale === 'en' ? 'Privacy' : '隐私政策'}</a>
